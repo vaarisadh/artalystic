@@ -1,6 +1,0 @@
-{
-  "name": "Artalystic",
-  "description": "A minimalist art showcase and artist collaboration platform for traditional, digital, fan, and handmade artwork.",
-  "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
-}
