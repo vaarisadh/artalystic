@@ -1,0 +1,45 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Default deny catch-all
+    match /{document=**} {
+      allow read, write: if false;
+    }
+
+    // Artworks Collection
+    match /artworks/{artworkId} {
+      allow read, write: if true;
+    }
+
+    // Email Requests / Inquiries
+    match /email_requests/{requestId} {
+      allow read, write: if true;
+    }
+
+    // Applications
+    match /applications/{applicationId} {
+      allow read, write: if true;
+    }
+
+    // Artwork Enquiries Collection
+    match /artworkEnquiries/{enquiryId} {
+      allow read, write: if true;
+    }
+
+    // Contact Enquiries Collection
+    match /contactEnquiries/{enquiryId} {
+      allow read, write: if true;
+    }
+
+    // Artist Applications Collection
+    match /artistApplications/{applicationId} {
+      allow read, write: if true;
+    }
+
+    // Connection test doc
+    match /_connection_test/{docId} {
+      allow read, write: if true;
+    }
+  }
+}
